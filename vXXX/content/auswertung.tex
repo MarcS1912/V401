@@ -1,12 +1,106 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
-\begin{figure}
+\subsection{Fehlerrechnung}
+Der Mittelwert einer physikalischen Größe $a$ mit $N$ Einzelmesswerten ist gegeben durch
+\begin{equation}\label{eq:mean}
+    \overline{a}=\frac{1}{N}\sum_{i=1}^Na_\text{i}\,.
+\end{equation}
+Die Standardabweichung eines Mittelwerts zu einer physikalischen Größe a bestimmt sich mit
+\begin{equation}\label{eq:std}
+    \Delta{a}=\sqrt{\frac{1}{N(N-1)}\sum_{i=1}^N\left(a_\text{i}-\overline{x}\right)}\,.
+\end{equation}
+Für fehlerbehaftete und voneinander unabhängige Eingangsgrößen $x_\text{k}$ mit {${k=1\text{,}\,\ldots\text{,}\,n}$} und den Ungenauigkeiten $\Delta x_\text{k}$ lautet die Ungenauigkeit der abgeleiteten Größe $f$ nach der gaußschen Fehlerfortpflanzung
+\begin{equation}\label{eq:gauss}
+    \Delta f=\sqrt{\sum_{k=1}^{n}\biggl(\frac{\partial f}{\partial x_\text{k}}\biggr)^2(\Delta x_\text{k})^2}\,.
+\end{equation}
+Der gewichtete Mittelwert einer fehlerbehafteten Größe $a\pm b$ mit 2 Einzelmesswerten ist gegeben durch
+\begin{equation}\label{eq:gmean}
+    \overline{a}=\frac{p_1\cdot a_1+p_2\cdot a_2}{p_1+p_2},
+\end{equation}
+wobei $p_1=1/b_1^2$ und $p_2=1/b_2^2$ die Gewichte sind.
+Der Fehler des Mittelwerts bestimmt sich dann durch 
+\begin{equation}\label{eq:gstd}
+    \Delta a= \frac{1}{\sqrt{p1+p2}}.
+\end{equation}
+\subsection{Bestimmung der Wellenlänge eines Lasers}
+Das Interferometer soll zunächst dafür verwendet werden, die Wellenlänge des verwendeten Lasers zu bestimmen.
+Dafür wird 19 Mal die Anzahl auftretender Interferenzminima bei einer festen Änderung des Lichtwegs um eine entsprechende Veränderung
+an einer Mikrometerschraube um $d=\qty{5}{\mm}$. Dies ist allerdings nicht immer gelungen, weswegen zunächst zwei Teilmessreihen 
+mit je einmal $d_1=$5,1mm und $d_2=$5mm. Die entsprechenden gemessenen Minima sind in Tabelle \ref{tab:Laenge} eingetragen.
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \caption{Messwerte zur Bestimmung der Wellenlänge eines Lasers.}
+  \label{tab:Laenge}
+  \begin{tabular}{S[table-format=1.1] S[table-format=4]}
+    \toprule
+    {$d$/mm }& {Interferenzminima $z$} \\
+    \midrule
+    5,1 & 2776 \\
+    5,1 & 2487 \\
+    5 & 2438 \\
+    5 & 2427 \\
+    5 & 2436 \\
+    5 & 2409 \\
+    5 & 2435 \\
+    5 & 2418 \\
+    5 & 2430 \\
+    5 & 2413 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\noindent Zunächst werden gemäß Gleichung \eqref{eq:mean} und \eqref{eq:std} der Mittelwert und die Standardabweichung des 
+Mittelwerts der gemessenen Minima für beide $d$ berechnet. Es ergeben sich 
+\begin{align*}
+    z_1&=\qty{2567(105)}{}\\
+    z_2&=\qty{2426(4)}{}.\\
+\end{align*}
+Nun muss aus der Verstellung der Mikrometerschraube noch die zusätzliche Weglänge des Lichts ermittelt werden. Dabei muss die Übersetzung
+$\text{ü}=\num{5.017}$ und die Tatsache, dass das Licht jeden zusätzlichen Weg zweimal zurücklegen muss, beachtet werden.
+Damit ergibt sich der Lichtweg zu 
+\begin{equation}
+  d_\text{Licht}=\frac{2\cdot d}{\text{ü}}.
+\end{equation}
+Der Fehler berechnet sich über die gleiche Formel, wobei $\Delta d=\qty{0.01}{\mm}$ einem Skalenanteil entspricht.
+Das bedeutet für die beiden Verstellungen der Mikrometerschraube ein Lichtweg von 
+\begin{align*}
+  d_\text{Licht,1}&=\qty{2.020(0.004)}{\mm}\\
+  d_\text{Licht,2}&=\qty{1.993(0.004)}{\mm}.\\
+\end{align*}
+Aus Formel \eqref{eq:} für destruktive Interferenzen lässt sich mit dem Mittelwert der gemessenen Minima und der 
+gemessenen Wegstrecke des Lichts die Wellenlänge $\lambda$ bestimmen. Der Fehler der Wellenlänge ergibt sich gemäß Gaußscher Fehlerfortpflanzung \eqref{eq:gauss} zu 
+\begin{equation*}
+    \Delta \lambda =\overline{\lambda}\sqrt{\left(\frac{\Delta d_\text{Licht}}{\overline{d_\text{Licht}}}\right)^2+\left(\frac{2\Delta z }{2\overline{z}+1}\right)^2}
+\end{equation*}
+Für die einzelnen Wegunterschiede ergeben sich dann für die Wellenlänge des Lasers 
+\begin{align*}
+  \lambda_1&=\qty{787(32)}{\nm}\\
+  \lambda_2&=\qty{822(2)}{\nm}.\\
+\end{align*}
+Nun kann das gewichtete Mittel über beide Ergebnisse gemäß den Gleichungen \eqref{eq:gmean} und \eqref{eq:gstd}
+gebildet werden. Dann ergibt sich die resultierende Wellenlänge der Stichprobe zu 
+\begin{equation*}
+    \lambda=\qty{821(2)}{\nm}.
+\end{equation*}
+\subsection{Bestimmung des Brechungsindex in Luft}
 
-
-Siehe \autoref{fig:plot}!
+\begin{table}[H]
+  \centering
+  \caption{Messwerte zur Bestimmung des Brechungsindex von Luft.}
+  \label{tab:Index}
+  \begin{tabular}{S[table-format=4]}
+    \toprule
+    {Interferenzminima $z$ }\\
+    \midrule
+    23 \\
+    25 \\
+    19 \\
+    25 \\
+    18 \\
+    26 \\
+    18 \\
+    26 \\
+    21 \\
+    27 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
