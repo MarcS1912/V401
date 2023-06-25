@@ -1,0 +1,15 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Ziel}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Wellencharakter des Lichts und Interferenz}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bedingungen für Interferenz und der Begriff der Kohärenz}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Das Michelson-Interferometer}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Durchführung}{7}{section.3}%
+\contentsline {section}{\numberline {4}Auswertung}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Fehlerrechnung}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bestimmung der Wellenlänge eines Lasers}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Bestimmung des Brechungsindex in Luft}{10}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Diskussion}{12}{section.5}%
+\contentsline {section}{\numberline {6}Anhang}{14}{section.6}%
+\contentsline {section}{\nonumberline Literatur}{16}{section*.9}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

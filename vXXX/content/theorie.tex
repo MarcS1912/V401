@@ -1,10 +1,15 @@
 \section{Ziel}
 \label{sec:Ziel}
 
+Ziel dieses Versuchs ist die Bestimmung der Wellenlänge eines Lasers mit Hilfe eines Michelson-Interferometers. 
+Zudem soll der Brechungsindex von Luft ermittelt werden. 
 
 \section{Theorie}
 \label{sec:Theorie}
 
+In diesem Kapitel wird zunächst auf die Natur des Lichts und seine Interpretation als Welle in diesem Versuch eingegangen.
+Auf dieser Grundlage werden die Phänomene erläutert, die am Michelson-Interferometer untersucht werden können. 
+Zudem wird der Aufbau und die Verwendung des Michelson-Interferometers erklärt. 
 \subsection{Wellencharakter des Lichts und Interferenz}
 \label{ssec:Interferenz}
 
@@ -18,7 +23,7 @@ das Phänomen der Interferenz.
 Nimmt man also an, dass Licht eine elektromagnetische Welle ist und betrachtet den einfachsten Fall einer ebenen Welle, 
 kann die Ort- und Zeitabhängigkeit der elektrischen Feldstärke $\vec{E}$ in der Form
 \begin{equation}
-    \vec{E}(x,t) = \vec{E_0} \cos{kx - \omega t - \delta}
+    \vec{E}(x,t) = \vec{E_0} \cos\left(kx - \omega t - \delta\right)
 \label{eqn:wave}
 \end{equation}
 beschrieben werden. Hier steht $k = \frac{2\pi}{\lambda}$ für die Wellenzahl, $\omega$ für die Kreisfrequenz und 
@@ -28,7 +33,7 @@ in diesem Punkt die Summe der Feldstärken der $n$ Lichtwellen, die überlagert 
 $E_\text{ges} = E_1 + E_2 + ... + E_\text{n}$. Diese Änderung der Gesamtamplitude bei der Überlagerung mehrerer Wellen nach dem 
 Superpositionsprinzip wird als Interferenz bezeichnet. 
 
-Aufgrund der hohen Lichtfrequenz in der Größenordnung $\SI{10e15}{\hertz}$ ist die elektrische Feldstärke in der Praxis
+Aufgrund der hohen Lichtfrequenz in der Größenordnung $\SI{e15}{\hertz}$ ist die elektrische Feldstärke in der Praxis
 nicht direkt messbar, weshalb stattdessen die Intensität gemessen wird. Aus den Maxwell-Gleichungen kann hergeleitet 
 werden, dass Intensität und Energie einer elektromagnetischen Welle über die Beziehung 
 \begin{equation}
@@ -37,29 +42,29 @@ werden, dass Intensität und Energie einer elektromagnetischen Welle über die B
 miteinander verknüpft sind. Für die Summe der Intensitäten zweier elektromagnetischer Wellen in einem Punkt im Raum
 gilt demnach
 \begin{equation}
-    I_\text{ges} = 2 \text{const} \vec{E_0}^2 \cos{1 + \delta_2 - \delta_1}.
+    I_\text{ges} = 2 \text{const} \vec{E_0}^2 \cos\left(1 + \delta_2 - \delta_1\right) .
 \end{equation}
 Die Gesamtintensität zweier Wellen, die in einem Raumpunkt überlagert werden, ist also nicht einfach die Summe der Einzelintensitäten der 
 überlagerten Wellen $2 \text{const} \vec{E_0}^2$, sondern hängt auch vom Phasenunterschied der Wellen ab. 
 Der Interferenzterm
 \begin{equation}
-    2 \text{cost} \vec{E_0}^2 \cos{\delta_2 - \delta_1},
+    2 \text{const} \vec{E_0}^2 \cos\left(\delta_2 - \delta_1\right), 
 \end{equation}
 beschreibt das Interferenzverhalten der überlagerten Wellen und kann je nach Phasenlage der Wellen zueinander Werte 
-zwischen $ -2 \text{cost} \vec{E_0}^2$ und $2 \text{cost} \vec{E_0}^2$ annehmen. 
+zwischen $ -2 \text{const} \vec{E_0}^2$ und $2 \text{const} \vec{E_0}^2$ annehmen. 
 Er nimmt den Wert 0 an, wenn $\delta_2 - \delta_1$ ein ungerades Vielfaches von $\pi$ ist. 
 
 \subsection{Bedingungen für Interferenz und der Begriff der Kohärenz}
 \label{ssec:kohärenz}
 
 Im Allgemeinen lässt sich keine Interferenz beobachten, wenn Licht aus zwei verschiedenen Lichtquellen überlagert wird.
-Grund dafür ist Natur der Entstehung von Licht. Gehen angeregte Atome in ihren Grundzustand zurück, wird dabei Energie in 
+Grund dafür ist die Natur der Entstehung von Licht. Gehen angeregte Atome in ihren Grundzustand zurück, wird dabei Energie in 
 Form von elektromagnetischen Wellen emittiert. Da diese Wellen eine endliche Länge haben und ihre Emission über die Zeit
 einer statistischen Verteilung unterliegt, verschwindet der Interferenzterm bei Mittelung über einen hinreichend großen 
 Zeitraum. Das von zwei verschiedenen Lichtquellen emittierte Licht ist also nicht interferenzfähig und wird als
 inkohärent bezeichnet. 
 
-Kohärentes Licht zeichnet sich hingegen dadurch aus, dass gemäß \autoref{eqn:wave} ein festes k, $\omega$ und $\delta$ für alle emittierten Wellenzüge
+Kohärentes Licht zeichnet sich hingegen dadurch aus, dass gemäß \autoref{eqn:wave} k, $\omega$ und $\delta$ für alle emittierten Wellenzüge
 konstant sind. Die Erzeugung von kohärentem Licht ist mit Hilfe von Lasern möglich. 
 
 Es ist jedoch mit konventionellen Lichtquellen möglich, Interferenzeffekte zu beobachten. Dafür wird Licht aus einer 
@@ -83,10 +88,10 @@ wobei $N$ die Zahl der maximal beobachtbaren Interferenzmaxima im Punkt $P$ ist.
 
 Der Aufbau des Michelson-Interferometers ist in \autoref{fig:michelson} skizziert. 
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics{content/michelson.png}
-    \caption{Schematischer Aufbau des Michelson-Interferometers.}
+    \includegraphics[width=6cm]{content/michelson.png}
+    \caption{Schematischer Aufbau des Michelson-Interferometers. \cite{sample}}
     \label{fig:michelson}
   \end{figure}
 
@@ -114,10 +119,10 @@ wobei z die Zahl der Helligkeitsmaxima ist.
 Eine weitere Möglichkeit zur Erzeugung eines optischen Wegunterschieds ist das Einbringen eines Mediums der Länge $b$ mit einem 
 Brechungsindex $n + \Delta n$ in den Weg eines der beiden Lichtstrahlen, exemplarisch dargestellt in \autoref{fig:index}. 
 
-\begin{figure}
+\begin{figure}[h]
     \centering
-    \includegraphics{content/brechungsindex.png}
-    \caption{Aufbau zur Messung kleiner Brechungsindexunterschiede mit dem Michelson-Interferometer.}
+    \includegraphics[width=12cm]{content/brechungsindex.png}
+    \caption{Aufbau zur Messung kleiner Brechungsindexunterschiede mit dem Michelson-Interferometer. \cite{sample}}
     \label{fig:index}
   \end{figure}
 
@@ -164,6 +169,3 @@ Brechungsindex aus Druckvariation
 \begin{equation}
     n(p_0, T_0) = 1 + \frac{z\lambda}{2b} \frac{T}{T_0} \frac{p_0}{p-p'} .
 \end{equation}
-
-\cite{sample}
-
