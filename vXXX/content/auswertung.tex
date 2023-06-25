@@ -22,11 +22,17 @@ Der Fehler des Mittelwerts bestimmt sich dann durch
 \begin{equation}\label{eq:gstd}
     \Delta a= \frac{1}{\sqrt{p1+p2}}.
 \end{equation}
+Die relative Abweichung zwischen einem experimentell bestimmten Wert $a_\text{exp}$ und der theoretischen Vorhersage $a_\text{theo}$ wird 
+durch 
+\begin{equation}\label{eq:delta}
+    \Delta = \frac{|a_\text{exp}-a_\text{theo}|}{a_\text{theo}}
+\end{equation}
+ermittelt.
 \subsection{Bestimmung der Wellenlänge eines Lasers}
 Das Interferometer soll zunächst dafür verwendet werden, die Wellenlänge des verwendeten Lasers zu bestimmen.
-Dafür wird 19 Mal die Anzahl auftretender Interferenzminima bei einer festen Änderung des Lichtwegs um eine entsprechende Veränderung
-an einer Mikrometerschraube um $d=\qty{5}{\mm}$. Dies ist allerdings nicht immer gelungen, weswegen zunächst zwei Teilmessreihen 
-mit je einmal $d_1=$5,1mm und $d_2=$5mm. Die entsprechenden gemessenen Minima sind in Tabelle \ref{tab:Laenge} eingetragen.
+Dafür wird 10 Mal die Anzahl auftretender Interferenzminima bei einer festen Änderung des Lichtwegs um eine entsprechende Veränderung
+an einer Mikrometerschraube um $d=\qty{5}{\mm}$ gemessen. Dies ist allerdings nicht immer gelungen, weswegen zunächst zwei Teilmessreihen 
+mit je einmal $d_1=$5,1mm und $d_2=$5mm betrachtet werden. Die entsprechenden gemessenen Minima sind in Tabelle \ref{tab:Laenge} eingetragen.
 \begin{table}[H]
   \centering
   \caption{Messwerte zur Bestimmung der Wellenlänge eines Lasers.}
@@ -49,7 +55,7 @@ mit je einmal $d_1=$5,1mm und $d_2=$5mm. Die entsprechenden gemessenen Minima si
   \end{tabular}
 \end{table}
 \noindent Zunächst werden gemäß Gleichung \eqref{eq:mean} und \eqref{eq:std} der Mittelwert und die Standardabweichung des 
-Mittelwerts der gemessenen Minima für beide $d$ berechnet. Es ergeben sich 
+Mittelwerts der gemessenen Minima für beide Mikrometerschrauben-Verstellungen berechnet. Es ergeben sich 
 \begin{align*}
     z_1&=\qty{2567(105)}{}\\
     z_2&=\qty{2426(4)}{}.\\
@@ -61,12 +67,12 @@ Damit ergibt sich der Lichtweg zu
   d_\text{Licht}=\frac{2\cdot d}{\text{ü}}.
 \end{equation}
 Der Fehler berechnet sich über die gleiche Formel, wobei $\Delta d=\qty{0.01}{\mm}$ einem Skalenanteil entspricht.
-Das bedeutet für die beiden Verstellungen der Mikrometerschraube ein Lichtweg von 
+Das bedeutet für die beiden Verstellungen der Mikrometerschraube ein jeweiliger Lichtweg von 
 \begin{align*}
   d_\text{Licht,1}&=\qty{2.020(0.004)}{\mm}\\
   d_\text{Licht,2}&=\qty{1.993(0.004)}{\mm}.\\
 \end{align*}
-Aus Formel \eqref{eq:} für destruktive Interferenzen lässt sich mit dem Mittelwert der gemessenen Minima und der 
+Aus Formel \eqref{eq:} über den Zusammenhang auftretender destruktive Interferenzen und dem Verhältnis vom Lichtweg zur Wellenlänge lässt sich mit dem Mittelwert der gemessenen Minima und der 
 gemessenen Wegstrecke des Lichts die Wellenlänge $\lambda$ bestimmen. Der Fehler der Wellenlänge ergibt sich gemäß Gaußscher Fehlerfortpflanzung \eqref{eq:gauss} zu 
 \begin{equation*}
     \Delta \lambda =\overline{\lambda}\sqrt{\left(\frac{\Delta d_\text{Licht}}{\overline{d_\text{Licht}}}\right)^2+\left(\frac{2\Delta z }{2\overline{z}+1}\right)^2}
@@ -77,11 +83,17 @@ Für die einzelnen Wegunterschiede ergeben sich dann für die Wellenlänge des L
   \lambda_2&=\qty{822(2)}{\nm}.\\
 \end{align*}
 Nun kann das gewichtete Mittel über beide Ergebnisse gemäß den Gleichungen \eqref{eq:gmean} und \eqref{eq:gstd}
-gebildet werden. Dann ergibt sich die resultierende Wellenlänge der Stichprobe zu 
+gebildet werden. Dann ergibt sich die aus der Stichprobe resultierende Wellenlänge zu 
 \begin{equation*}
     \lambda=\qty{821(2)}{\nm}.
 \end{equation*}
 \subsection{Bestimmung des Brechungsindex in Luft}
+Für die Bestimmung des Brechungsindex von Luft werden bei einem Druckunterschied von $\Delta p=p-p'=500$mmHg$=666.5$mbar die 
+auftretenden Interferenzminima gezählt. Die entsprechenden Messwerte sind in Tabelle \ref{tab:Index} abgebildet, wobei die ungeraden 
+Einträge den Evakuierungsprozess beschreiben, während bei den geraden Einträgen das Ventil geöffnet worden
+ist um die Luft wieder hereinzulassen. Da bereits ohne Auswertung für beide Fälle 
+ein sichtbar unterschiedliches Verhalten zu erkennen ist, werden die Fälle auch zunächst unabhängig voneinander betrachtet.
+Der Evakuierungsfall wird mit dem Index 1 und der Einlass der Luft mit dem Index 2 bezeichnet.
 
 \begin{table}[H]
   \centering
@@ -104,3 +116,46 @@ gebildet werden. Dann ergibt sich die resultierende Wellenlänge der Stichprobe 
     \bottomrule
   \end{tabular}
 \end{table}
+
+\noindent Nun muss für beide Fälle wieder eine Mittelwertbildung gemäß den Gleichungen 
+\eqref{eq:mean} und \eqref{eq:std} durchgeführt werden. Es ergibt sich für $z$
+\begin{align*}
+  z_1&=\qty{19.8(1.0)}{}\\
+  z_2&=\qty{25.8(0.4)}{}.\\
+\end{align*}
+Nun soll über Gleichung \eqref{eq:} der gemessene Unterschied des Brechungsindex bestimmt werden. 
+Dafür wird der theoretische Wert der Wellenlänge des Lasers von $\lambda=\qty{680}{\nm}$
+und die Dicke der Messzelle $b=\qty{50}{\mm}$ benutzt. Im folgenden werden Fehler mit einem $D$ angegeben, um 
+Verwirrungen zu vermeiden. Der Fehler der Wellenlängenänderung $D\Delta n$ ergibt sich über die gleiche Formel, 
+wobei statt $z$ $Dz$ eingesetzt wird.
+Damit ergibt sich für die Änderung des Brechungsindex bei Änderung des Drucks
+\begin{align*}
+  \Delta n_1&=\qty{1.34(0.07)e-4}{}\\
+  \Delta n_2&=\qty{1.75(0.03)e-4}{}.\\
+\end{align*}
+Nun soll aus der Änderung des Brechungsindex bei Änderung des Luftdrucks der Brechungsindex 
+von Luft bei Normalbedingung $T_0=\qty{273.15}{\kelvin}$ und $p_0=\qty{1013.2}{}\text{mbar}$ bestimmt werden.
+Die Temperatur während der Messung ist vergessen worden zu messen. Daher muss sich hier auf eine grobe Schätzung von 
+$T=297.15K$ beziehungsweise 24°C verlassen werden. Es wird vermutet, dass sich die Temperatur in einem 2 K Intervall um diesen Wert aufhält.
+Daher wird ein Fehler von $DT=\qty{2}{\kelvin}$ angegeben.
+Nun lässt sich der Brechungsindex über die Formel 
+\begin{equation*}
+  n=1+\Delta n \frac{T\cdot p_0}{T_0\cdot \Delta p}
+\end{equation*}
+bestimmen. Der Fehler pflanzt sich gemäß der Gaußschen Fehlerfortpflanzung \eqref{eq:gauss} zu 
+\begin{equation}
+    Dn= (n-1)\sqrt{\left(\frac{D\Delta n}{\Delta n}\right)^2+\left(\frac{D\Delta p}{\Delta p}\right)^2+\left(\frac{DT}{T}\right)^2}
+\end{equation}
+fort, wobei $D\Delta p=20\text{mmHg}=26.66\text{mbar}$ ist und 2 Skalenanteilen auf dem Manometer entspricht. Der Fehler 
+resultiert aus dem ungenauen Ablesen von Start und Zieldruck. 
+Damit ergeben sich aus den Messungen bei Evakuierung und hereinlassen der Luft die 
+Brechungsindizes 
+\begin{align*}
+  n_1&=\qty{1.000223(0.000014)}{}\\
+  n_2&=\qty{1.000290(0.000012)}{}.\\
+\end{align*}
+Nun kann noch das gewichtete Mittel beider Messungen nach Gleichung \eqref{eq:gmean} und \eqref{eq:gstd} gebildet werden. Damit ergibt sich als 
+Brechungsindex für alle 10 Messungen
+\begin{equation*}
+    n=\qty{1.000261(0.000009)}{}
+\end{equation*}
