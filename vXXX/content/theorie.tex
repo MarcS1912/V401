@@ -85,7 +85,7 @@ Der Aufbau des Michelson-Interferometers ist in \autoref{fig:michelson} skizzier
 
 \begin{figure}
     \centering
-    \includegraphics{michelson.pdf}
+    \includegraphics{content/michelson.png}
     \caption{Schematischer Aufbau des Michelson-Interferometers.}
     \label{fig:michelson}
   \end{figure}
@@ -112,8 +112,17 @@ d, ändert sich die detektierte Intensität. Es gilt die Gleichung
 wobei z die Zahl der Helligkeitsmaxima ist. 
 
 Eine weitere Möglichkeit zur Erzeugung eines optischen Wegunterschieds ist das Einbringen eines Mediums der Länge $b$ mit einem 
-Brechungsindex $n + \Delta n$ in den Weg eines der beiden Lichtstrahlen. Der optische Wegunterschied der beiden Strahlen
-beträgt dann $\Delta N b$. Nutzt man als solches Medium ein Gasgemisch, welches in einer Zelle in den Strahlengang eingebracht
+Brechungsindex $n + \Delta n$ in den Weg eines der beiden Lichtstrahlen, exemplarisch dargestellt in \autoref{fig:index}. 
+
+\begin{figure}
+    \centering
+    \includegraphics{content/brechungsindex.png}
+    \caption{Aufbau zur Messung kleiner Brechungsindexunterschiede mit dem Michelson-Interferometer.}
+    \label{fig:index}
+  \end{figure}
+
+Der optische Wegunterschied der beiden Strahlen beträgt dann $\Delta N b$. 
+Nutzt man als solches Medium ein Gasgemisch, welches in einer Zelle in den Strahlengang eingebracht
 wird, lässt sich der Weglängenunterschied $\Delta N b$ erhöhen, indem man die Zelle evakuiert oder den Druck $p$ in dieser erhöht.
 Wird der optische Weglängenunterschied auf diese Weise stetig erhöht, lassen sich am Detektor $z$ Interferenzmaxima erkennen.
 Es gilt das Verhältnis
@@ -142,7 +151,7 @@ Temperatur $T$ lässt sich durch
 beschreiben. Hierbei sind $T_0 = \SI{273,15}{\kelvin}$ und $p_0 = \SI{1013,2}{\bar}$ Normaltemperatur und -druck. 
 Die Loschmidtsche Zahl $N_\text{L}$ ist die Zahl der Moleküle, die sich unter diesen Normalbedingungen in 1 Mol eines
 Gases enthalten sind. 
-Für den Unterschied des Brechungsindexes, der sich bei Änderung des Drucks von $p$ zu $p'$ ergibt, gilt demnach
+Für den Unterschied des Brechungsindex, der sich bei Änderung des Drucks von $p$ zu $p'$ ergibt, gilt demnach
 \begin{equation}
     \Delta n(p,p') = \frac{f}{2} N_\text{L} \frac{T_0}{p_0} \frac{1}{T} (p-p') .
 \end{equation}
@@ -155,7 +164,6 @@ Brechungsindex aus Druckvariation
 \begin{equation}
     n(p_0, T_0) = 1 + \frac{z\lambda}{2b} \frac{T}{T_0} \frac{p_0}{p-p'} .
 \end{equation}
-
 
 \cite{sample}
 
