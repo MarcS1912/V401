@@ -96,7 +96,66 @@ Material durchdringt und Spiegel $S2$ erreicht. Beide Strahlen werden am jeweili
 erneut den Spiegel $P$, an dem beide Strahlen wiederum geteilt werden. Für die Untersuchung der Interferenzphänomene sind
 lediglich die Anteile relevant, die den Spiegel passieren und zum Detektor $D$ gelangen. Entscheidend ist dabei, dass
 die beiden Strahlenbündel kohärent sind, ihr optischer Wegunterschied also kleiner als die Kohärenzlänge der Lichtquelle ist.
-Dies kann realisiert werden, indem
+Dies kann realisiert werden, indem die Strecken $\overline{PS1}$ und $\overline{PS2}$ identisch gewählt werden und zudem eine
+Kompensationsplatte zwischen $P$ und $S2$ gebracht wird, die die selbe Dicke wie der semi-permeable Spiegel hat und aus einem
+Material gefertigt ist, welches einen identischen Brechungsindex hat. Die Kompensationsplatte wird benötigt, da der Lichtstrahl,
+der die Strecke $\overline{PS1}$ zurücklegt, auf seinem Weg von Lichtquelle zu Detektor insgesamt drei mal den semi-permeablen
+Spiegel passiert, während der andere Lichtstrahl, der die Strecke $\overline{PS2}$ zurücklegt, auf seine Weg zum Detektor nur einmal
+den semi-permeablen Spiegel nur einmal passiert. 
+
+Unter diesen Voraussetzungen stellt sich für $\overline{PS1}$ = $\overline{PS2}$ am Detektor ein Gangunterschied von $\frac{\lambda}{2}$ 
+zwischen den Lichtstrahlen ein, was zu destruktiver Interferenz führt. Verschiebt man nun einen Spiegel um die Strecke
+d, ändert sich die detektierte Intensität. Es gilt die Gleichung
+\begin{equation}
+    d = z \frac{\lambda}{2}, 
+\end{equation}
+wobei z die Zahl der Helligkeitsmaxima ist. 
+
+Eine weitere Möglichkeit zur Erzeugung eines optischen Wegunterschieds ist das Einbringen eines Mediums der Länge $b$ mit einem 
+Brechungsindex $n + \Delta n$ in den Weg eines der beiden Lichtstrahlen. Der optische Wegunterschied der beiden Strahlen
+beträgt dann $\Delta N b$. Nutzt man als solches Medium ein Gasgemisch, welches in einer Zelle in den Strahlengang eingebracht
+wird, lässt sich der Weglängenunterschied $\Delta N b$ erhöhen, indem man die Zelle evakuiert oder den Druck $p$ in dieser erhöht.
+Wird der optische Weglängenunterschied auf diese Weise stetig erhöht, lassen sich am Detektor $z$ Interferenzmaxima erkennen.
+Es gilt das Verhältnis
+\begin{equation}
+    b \cdot  \Delta n = \frac{z\lambda}{2} .
+    \label{eqn:deltan}
+\end{equation} 
+
+Aus der klassischen Dispersionstheorie folgt die Formel
+\begin{equation}
+    n = \sqrt{1 + f(\lambda) \cdot N}
+    \label{eqn:dispersion}
+\end{equation}
+herleiten. Sie beschreibt das Verhältnis zwischen dem Brechungsindex $n$ eines Materials und der Zahl $N$ der erzwungenen 
+Schwingungen angeregten Dipole pro Volumeneinheit. Für Licht im sichtbaren Bereich gilt $fN \ll 1$ kann \autoref{eqn:dispersion}
+zu 
+\begin{equation}
+    n = 1 + \frac{f}{2} N
+\end{equation}
+genähert werden. Für die in diesem Versuch untersuchten Druckbereiche darf weiterhin angenommen werden, dass die verwendeten Gase 
+sich wie ideale Gase verhalten. Die Abhängigkeit der Zahl $N$ der vorhandenen Moleküle pro Volumeneinheit in Abhängigkeit von Druck $p$ und 
+Temperatur $T$ lässt sich durch
+\begin{equation}
+    N(p,T) = \frac{p}{T} \frac{T_0}{p_0} N_\text{L}
+\end{equation}
+beschreiben. Hierbei sind $T_0 = \SI{273,15}{\kelvin}$ und $p_0 = \SI{1013,2}{\bar}$ Normaltemperatur und -druck. 
+Die Loschmidtsche Zahl $N_\text{L}$ ist die Zahl der Moleküle, die sich unter diesen Normalbedingungen in 1 Mol eines
+Gases enthalten sind. 
+Für den Unterschied des Brechungsindexes, der sich bei Änderung des Drucks von $p$ zu $p'$ ergibt, gilt demnach
+\begin{equation}
+    \Delta n(p,p') = \frac{f}{2} N_\text{L} \frac{T_0}{p_0} \frac{1}{T} (p-p') .
+\end{equation}
+Der Brechungsindex eines Materials unter Normalbedingungen kann mit
+\begin{equation}
+    n(p_0,T_0) = 1 + \Delta n (p,p') \frac{T}{T_0} \frac{p_0}{p-p'}
+\end{equation}
+bestimmt werden. Setzt man in diese Gleichung nun noch \autoref{eqn:deltan} ein, folgt für die endgültige Formel zur Bestimmung des
+Brechungsindex aus Druckvariation
+\begin{equation}
+    n(p_0, T_0) = 1 + \frac{z\lambda}{2b} \frac{T}{T_0} \frac{p_0}{p-p'} .
+\end{equation}
 
 
 \cite{sample}
+
