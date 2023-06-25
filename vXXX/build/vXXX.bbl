@@ -29,6 +29,38 @@
       \field{title}{Anleitung zum Versuch V401-Michelson-Interferometer}
       \field{year}{2022}
     \endentry
+    \entry{Brechungsindex}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2ff4ab1d379832d3edee28194fb4e7b2}{%
+           family={Stone},
+           familyi={S\bibinitperiod}}}%
+        {{hash=f94e25a141fb0525bb8f9282aeb4a8a9}{%
+           family={Zimmerman},
+           familyi={Z\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {National Institute of Standards}%
+        {Technology (NIST)}%
+      }
+      \strng{namehash}{e21f2c6b6f18381779bb57c508e45819}
+      \strng{fullhash}{e21f2c6b6f18381779bb57c508e45819}
+      \strng{bibnamehash}{e21f2c6b6f18381779bb57c508e45819}
+      \strng{authorbibnamehash}{e21f2c6b6f18381779bb57c508e45819}
+      \strng{authornamehash}{e21f2c6b6f18381779bb57c508e45819}
+      \strng{authorfullhash}{e21f2c6b6f18381779bb57c508e45819}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Index of Refraction of Air}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://emtoolbox.nist.gov/Wavelength/Edlen.asp
+      \endverb
+      \verb{url}
+      \verb https://emtoolbox.nist.gov/Wavelength/Edlen.asp
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

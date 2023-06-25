@@ -103,18 +103,19 @@ def Ddn(n,dz,z):
     return n*dz/z
 def n(dn,t,t0,p0,dp):
     return 1+dn*t*p0/(t0*dp)
-def Dn(n,Ddn,dn,Ddp,dp):
-    return (n-1)*np.sqrt((Ddn/dn)**2+(Ddp/dp)**2)
+def Dn(n,Ddn,dn,Ddp,dp,dt,t):
+    return (n-1)*np.sqrt((Ddn/dn)**2+(Ddp/dp)**2+(dt/t)**2)
 def meanz(z):
     return np.array([np.mean(z),np.std(z,ddof=1)/np.sqrt(len(z))])
 
-def Index(z,t0,t,p0,p,dp,lamda,b):
+def Index(z,t0,t,p0,p,dp,lamda,b,DT):
     mz=meanz(z)
     print(mz)
     dN=dn(mz[0],lamda,b)
     DdN=Ddn(dN,mz[1],mz[0])
+    print(f"Änderung von n: {dN}±{DdN}")
     N=n(dN,t,t0,p0,p)
-    DN=Dn(N,DdN,dN,dp,p)
+    DN=Dn(N,DdN,dN,dp,p,DT,t)
     return np.array([N,DN])
 
 Index_Minima=Data("content/Index.CSV")
@@ -137,14 +138,15 @@ print(f"relativer Fehler liegt bei: {Abweichung(lamb[0],theo):.3f}")
 T0=273.15
 p0=1013.2
 T=297.15
+DT=2
 p=666.6
 dp=26.66
 
-Index_raus=Index(Index_Minima[::2],T0,T,p0,p,dp,theo,b)
-Index_rein=Index(Index_Minima[1::2],T0,T,p0,p,dp,theo,b)
+Index_raus=Index(Index_Minima[::2],T0,T,p0,p,dp,theo,b,DT)
+Index_rein=Index(Index_Minima[1::2],T0,T,p0,p,dp,theo,b,DT)
 print(f"Brechungsindex in Luft,bei Evakuierung:{Index_raus[0]:.6e}± {Index_raus[1]:.6e}")
 print(f"Brechungsindex in Luft,beim Lufteinlass:{Index_rein[0]:.6e}± {Index_rein[1]:.6e}")
-ntheo=1.0002724
+ntheo=1.0002911
 print(f"relativer Fehler1 liegt bei: {Abweichung(Index_raus[0],ntheo):.6f}")
 print(f"relativer Fehler2 liegt bei: {Abweichung(Index_rein[0],ntheo):.6f}")
 print("Aussagekräftige relative Abweichung")
