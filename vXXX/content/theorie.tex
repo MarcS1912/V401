@@ -1,4 +1,102 @@
+\section{Ziel}
+\label{sec:Ziel}
+
+
 \section{Theorie}
 \label{sec:Theorie}
+
+\subsection{Wellencharakter des Lichts und Interferenz}
+\label{ssec:Interferenz}
+
+Verschiedene Versuche zur Natur des Lichts liefern Ergebnisse, die je nach Versuchsanordnung eine Beschreibung des 
+Lichts als Welle oder Teilchen (Korpuskel) erfordern. Die gemeinsame Erklärung dieser klassisch unvereinbaren Ergebnisse 
+wird durch die Quantenelektrodynamik ermöglicht. Es werden dabei Korpuskel- und Wellenmodell als Grenzfälle
+der Quantenelektrodynamik verstanden. Betrachtet man wie in diesem Versuch die Ausbreitung von Licht im Vakuum, stellt das 
+Wellenmodell die geeignete Näherung dar, um die auftretenden Phänomene zu beschreiben und zu erklären, insbesondere 
+das Phänomen der Interferenz. 
+
+Nimmt man also an, dass Licht eine elektromagnetische Welle ist und betrachtet den einfachsten Fall einer ebenen Welle, 
+kann die Ort- und Zeitabhängigkeit der elektrischen Feldstärke $\vec{E}$ in der Form
+\begin{equation}
+    \vec{E}(x,t) = \vec{E_0} \cos{kx - \omega t - \delta}
+\label{eqn:wave}
+\end{equation}
+beschrieben werden. Hier steht $k = \frac{2\pi}{\lambda}$ für die Wellenzahl, $\omega$ für die Kreisfrequenz und 
+$\delta$ für einen Phasenwinkel in Bezug auf Orts- und Zeitnullpunkt. Es gilt das Prinzip der linearen Superposition.
+Werden in einem Punkt im Raum $n$ Lichtwellen überlagert, ist die Gesamtfeldstärke des resultierenden elektrischen Feldes 
+in diesem Punkt die Summe der Feldstärken der $n$ Lichtwellen, die überlagert werden. Es gilt also 
+$E_\text{ges} = E_1 + E_2 + ... + E_\text{n}$. Diese Änderung der Gesamtamplitude bei der Überlagerung mehrerer Wellen nach dem 
+Superpositionsprinzip wird als Interferenz bezeichnet. 
+
+Aufgrund der hohen Lichtfrequenz in der Größenordnung $\SI{10e15}{\hertz}$ ist die elektrische Feldstärke in der Praxis
+nicht direkt messbar, weshalb stattdessen die Intensität gemessen wird. Aus den Maxwell-Gleichungen kann hergeleitet 
+werden, dass Intensität und Energie einer elektromagnetischen Welle über die Beziehung 
+\begin{equation}
+    I = \text{const} \cdot |\vec{E}|^2
+\end{equation}
+miteinander verknüpft sind. Für die Summe der Intensitäten zweier elektromagnetischer Wellen in einem Punkt im Raum
+gilt demnach
+\begin{equation}
+    I_\text{ges} = 2 \text{const} \vec{E_0}^2 \cos{1 + \delta_2 - \delta_1}.
+\end{equation}
+Die Gesamtintensität zweier Wellen, die in einem Raumpunkt überlagert werden, ist also nicht einfach die Summe der Einzelintensitäten der 
+überlagerten Wellen $2 \text{const} \vec{E_0}^2$, sondern hängt auch vom Phasenunterschied der Wellen ab. 
+Der Interferenzterm
+\begin{equation}
+    2 \text{cost} \vec{E_0}^2 \cos{\delta_2 - \delta_1},
+\end{equation}
+beschreibt das Interferenzverhalten der überlagerten Wellen und kann je nach Phasenlage der Wellen zueinander Werte 
+zwischen $ -2 \text{cost} \vec{E_0}^2$ und $2 \text{cost} \vec{E_0}^2$ annehmen. 
+Er nimmt den Wert 0 an, wenn $\delta_2 - \delta_1$ ein ungerades Vielfaches von $\pi$ ist. 
+
+\subsection{Bedingungen für Interferenz und der Begriff der Kohärenz}
+\label{ssec:kohärenz}
+
+Im Allgemeinen lässt sich keine Interferenz beobachten, wenn Licht aus zwei verschiedenen Lichtquellen überlagert wird.
+Grund dafür ist Natur der Entstehung von Licht. Gehen angeregte Atome in ihren Grundzustand zurück, wird dabei Energie in 
+Form von elektromagnetischen Wellen emittiert. Da diese Wellen eine endliche Länge haben und ihre Emission über die Zeit
+einer statistischen Verteilung unterliegt, verschwindet der Interferenzterm bei Mittelung über einen hinreichend großen 
+Zeitraum. Das von zwei verschiedenen Lichtquellen emittierte Licht ist also nicht interferenzfähig und wird als
+inkohärent bezeichnet. 
+
+Kohärentes Licht zeichnet sich hingegen dadurch aus, dass gemäß \autoref{eqn:wave} ein festes k, $\omega$ und $\delta$ für alle emittierten Wellenzüge
+konstant sind. Die Erzeugung von kohärentem Licht ist mit Hilfe von Lasern möglich. 
+
+Es ist jedoch mit konventionellen Lichtquellen möglich, Interferenzeffekte zu beobachten. Dafür wird Licht aus einer 
+Lichtquelle mit Hilfe eines Strahlteilers oder einer Doppelblende in zwei getrennte Strahlenbündel aufgeteilt. Die 
+Verwendung eines oder mehrerer Spiegel ermöglicht es, dass die beiden Strahlen nach dem Durchlaufen unterschiedlich 
+langer Strecken in einem Punkt $P$ wieder zusammengeführt werden. Die aus dem Wegunterschied resultierende 
+Phasendifferenz führt hier zu Interferenz. 
+Wird der Wegunterschied der beiden Strahlen allerdings zu groß gewählt, tritt keine Interferenz mehr auf. Dies ist damit
+zu begründen, dass der Emissionsvorgang eines Lichtzuges nur eine begrenzte Zeit beansprucht und dementsprechend auch die
+Länge des Wellenzuges endlich ist. Ist der Wegunterschied der beiden Strahlen größer als die Länge der Wellenzüge, treffen
+die Wellenzüge also zu unterschiedlichen Zeitpunkten im Punkt $P$ auf und es kann keine Interferenz auftreten. Die
+Länge, bei der im Punkt $P$ gerade keine Interferenz mehr auftritt, wird als Kohärenzlänge $l$ bezeichnet. 
+Die Kohärenzlänge ist definiert als
+\begin{equation}
+    l = N \lambda ,
+\end{equation}
+wobei $N$ die Zahl der maximal beobachtbaren Interferenzmaxima im Punkt $P$ ist. 
+
+\subsection{Das Michelson-Interferometer}
+\label{ssec:Michelson}
+
+Der Aufbau des Michelson-Interferometers ist in \autoref{fig:michelson} skizziert. 
+
+\begin{figure}
+    \centering
+    \includegraphics{michelson.pdf}
+    \caption{Schematischer Aufbau des Michelson-Interferometers.}
+    \label{fig:michelson}
+  \end{figure}
+
+Die Strahlteilung erfolgt mit Hilfe eines semi-permeablen Spiegels, der in \autoref{fig:michelson} mit $P$ gekennzeichnet
+ist. Ein Teil des Lichts wird an diesem Spiegel zu Spiegel $S1$ reflektiert, während der andere Teil das semi-permeable 
+Material durchdringt und Spiegel $S2$ erreicht. Beide Strahlen werden am jeweiligen Spiegel reflektiert und erreichen 
+erneut den Spiegel $P$, an dem beide Strahlen wiederum geteilt werden. Für die Untersuchung der Interferenzphänomene sind
+lediglich die Anteile relevant, die den Spiegel passieren und zum Detektor $D$ gelangen. Entscheidend ist dabei, dass
+die beiden Strahlenbündel kohärent sind, ihr optischer Wegunterschied also kleiner als die Kohärenzlänge der Lichtquelle ist.
+Dies kann realisiert werden, indem
+
 
 \cite{sample}
